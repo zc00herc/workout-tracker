@@ -35,6 +35,4 @@ for index in range(0,len(returned_workout["exercises"])):
     }
 
     sheety_response = requests.post(os.getenv('sheety_post_endpoint'),json=data_to_add,headers=header)
-    # sheety_response = requests.get(sheety_get_endpoint)
     sheety_response.raise_for_status()
-    # print(sheety_response.text)
